@@ -1,0 +1,70 @@
+# Site/SEO settings
+email: gabriel.krieshok@gmail.com
+baseurl: ""
+permalink: /:title/
+google_analytics: 
+
+name: Gabriel Krieshok
+title: Everyday Concepts
+description: >
+  Exploring useful concepts, ideas, and mental models that crop up (or ought to) in our lives.
+url: http://everydayconcepts.io
+twitter_username: gabrielkrieshok
+default_img: /assets/images/logo.png
+social:
+  - name: twitter
+    url: https://twitter.com/gabrielkrieshok
+  - name: instagram
+    url: https://www.instagram.com/gabrielkrieshok/
+  - name: linkedin
+    url: https://www.linkedin.com/in/gabrielkrieshok/
+  - name: github
+    url: https://github.com/gabrielkrieshok
+
+# Contact settings
+contact_img: 
+formcarry: https://formcarry.com/s/yaMrO1OP72Y
+
+# Pagination settings
+pagination:
+  enabled: true
+  debug: false
+  per_page: 12
+  permalink: '/page/:num/'
+  title: ':title'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    layouts: 
+      - 'tag.html'
+    title: 'Everyday Concepts'
+    permalink: '/tag/:tag'
+    slugify:
+      mode: raw
+      cased: true
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
+exclude:
+  - node_modules
+  - .DS_Store
+  - barber.jpg
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - README.md
