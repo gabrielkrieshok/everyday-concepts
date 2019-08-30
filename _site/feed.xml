@@ -6,9 +6,20 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Aug 2019 19:36:41 -0400</pubDate>
-    <lastBuildDate>Mon, 26 Aug 2019 19:36:41 -0400</lastBuildDate>
+    <pubDate>Fri, 30 Aug 2019 08:16:59 -0400</pubDate>
+    <lastBuildDate>Fri, 30 Aug 2019 08:16:59 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Kulterbrille</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/kulterbrille.png&quot; alt=&quot;Kulterbrille&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Aug 2019 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/kulterbrille/</link>
+        <guid isPermaLink="true">http://localhost:4000/kulterbrille/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Adjacent Possible</title>
