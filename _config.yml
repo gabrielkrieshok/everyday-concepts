@@ -10,7 +10,7 @@ description: >
   Exploring useful concepts, ideas, and mental models that crop up (or ought to) in our lives.
 url: http://everydayconcepts.io
 twitter_username: gabrielkrieshok
-default_img: /assets/images/logo.png
+default_img: /assets/images/logo-social.png
 social:
   - name: twitter
     url: https://twitter.com/gabrielkrieshok
@@ -44,7 +44,6 @@ autopages:
   tags:
     layouts: 
       - 'tag.html'
-    title: 'Everyday Concepts'
     permalink: '/tag/:tag'
     slugify:
       mode: raw
