@@ -6,15 +6,15 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Jan 2020 08:34:12 -0500</pubDate>
-    <lastBuildDate>Thu, 30 Jan 2020 08:34:12 -0500</lastBuildDate>
+    <pubDate>Tue, 04 Feb 2020 21:27:40 -0500</pubDate>
+    <lastBuildDate>Tue, 04 Feb 2020 21:27:40 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Zugzwang</title>
         <description>&lt;p&gt;&lt;img src=&quot;/assets/images/zugzwang.png&quot; alt=&quot;Zugzwang&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 30 Jan 2020 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 04 Feb 2020 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/zugzwang/</link>
         <guid isPermaLink="true">http://localhost:4000/zugzwang/</guid>
         
