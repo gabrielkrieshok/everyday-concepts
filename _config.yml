@@ -8,9 +8,9 @@ name: Gabriel Krieshok
 title: Everyday Concepts
 description: >
   Exploring useful concepts, ideas, and mental models that crop up (or ought to) in our lives.
-url: http://everydayconcepts.io
+url: https://everydayconcepts.io
 twitter_username: gabrielkrieshok
-default_img: /assets/images/logo-social.png
+default_img: /assets/icons/feature.png
 social:
   - name: twitter
     url: https://twitter.com/gabrielkrieshok
