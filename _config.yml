@@ -64,6 +64,5 @@ exclude:
   - barber.jpg
   - Gemfile
   - Gemfile.lock
-  - gulpfile.js
   - package.json
   - README.md
