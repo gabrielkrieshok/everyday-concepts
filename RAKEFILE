@@ -19,7 +19,6 @@ task :post do
     image: /assets/images/#{title.downcase.gsub(/[^\w]+/, '-')}.png
     ---
 
-    ![#{title}](/assets/images/#{title.downcase.gsub(/[^\w]+/, '-')}.png)
     EOS
   end
 

@@ -10,7 +10,7 @@ embed,
 iframe,
 video {
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 figure {
@@ -35,7 +35,7 @@ iframe {
 
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   overflow: hidden;
 }
 

@@ -6,15 +6,35 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Jun 2020 23:07:34 -0400</pubDate>
-    <lastBuildDate>Tue, 30 Jun 2020 23:07:34 -0400</lastBuildDate>
+    <pubDate>Wed, 22 Jul 2020 09:30:42 -0400</pubDate>
+    <lastBuildDate>Wed, 22 Jul 2020 09:30:42 -0400</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
+        <title>Matthew Effect</title>
+        <description>
+</description>
+        <pubDate>Wed, 22 Jul 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/matthew-effect/</link>
+        <guid isPermaLink="true">http://localhost:4000/matthew-effect/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Ouroboros</title>
+        <description>
+</description>
+        <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/ouroboros/</link>
+        <guid isPermaLink="true">http://localhost:4000/ouroboros/</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Externalities</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/externalities.png&quot; alt=&quot;Externalities&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The unintended side effects (good or bad) of an activity.&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 20 May 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/externalities/</link>
@@ -25,9 +45,7 @@
     
       <item>
         <title>Cost-Benefit Analysis</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/cost-benefit-analysis.png&quot; alt=&quot;Cost-Benefit Analysis&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cost-Benefit Analysis: A systematic approach to estimating the strengths and weaknesses of alternatives that satisfy transactions, activities or functional requirements.&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/cost-benefit-analysis/</link>
@@ -38,7 +56,7 @@
     
       <item>
         <title>Field of Dreams Fallacy</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/field-of-dreams-fallacy.png&quot; alt=&quot;Field of Dreams Fallacy&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 14 Apr 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/field-of-dreams-fallacy/</link>
@@ -49,7 +67,7 @@
     
       <item>
         <title>Zugzwang</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/zugzwang.png&quot; alt=&quot;Zugzwang&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 04 Feb 2020 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/zugzwang/</link>
@@ -60,7 +78,7 @@
     
       <item>
         <title>Hero's Journey</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/heros-journey.png&quot; alt=&quot;Hero's Journey&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Mon, 06 Jan 2020 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/heros-journey/</link>
@@ -71,7 +89,7 @@
     
       <item>
         <title>Kulterbrille</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/kulterbrille.png&quot; alt=&quot;Kulterbrille&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Fri, 30 Aug 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/kulterbrille/</link>
@@ -82,9 +100,7 @@
     
       <item>
         <title>Adjacent Possible</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/adjacent-possible.png&quot; alt=&quot;Adjacent Possible&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Read more about ‘The Adjacent Possible’ from &lt;a href=&quot;https://www.edge.org/response-detail/11843&quot;&gt;this essay&lt;/a&gt; by Stewart Brand in 2015.&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Mon, 26 Aug 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/adjacent-possible/</link>
@@ -95,7 +111,7 @@
     
       <item>
         <title>Doris Day Effect</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/doris-day-effect.png&quot; alt=&quot;Doris Day Effect&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Sat, 15 Jun 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/doris-day-effect/</link>
@@ -106,7 +122,7 @@
     
       <item>
         <title>Drake Equation</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/drake-equation.png&quot; alt=&quot;Drake Equation&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 12 Jun 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/drake-equation/</link>
@@ -117,7 +133,7 @@
     
       <item>
         <title>FOMO</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/fomo.png&quot; alt=&quot;FOMO&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 28 May 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/fomo/</link>
@@ -128,7 +144,7 @@
     
       <item>
         <title>Imposter Syndrome</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/imposter-syndrome.png&quot; alt=&quot;Imposter Syndrome&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 17 Oct 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/imposter-syndrome/</link>
@@ -139,7 +155,7 @@
     
       <item>
         <title>Peter Principle</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/peter-principle.png&quot; alt=&quot;Peter Principle&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 04 Sep 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/peter-principle/</link>
@@ -150,7 +166,7 @@
     
       <item>
         <title>Ikea Effect</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/ikea-effect.png&quot; alt=&quot;Ikea Effect&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 15 Aug 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/ikea-effect/</link>
@@ -161,7 +177,7 @@
     
       <item>
         <title>Ikigai</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/ikigai.png&quot; alt=&quot;Ikigai&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 14 Aug 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/ikigai/</link>
@@ -172,7 +188,7 @@
     
       <item>
         <title>NIMBY</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/nimby.png&quot; alt=&quot;NIMBY&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 01 Aug 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/nimby/</link>
@@ -183,7 +199,7 @@
     
       <item>
         <title>Grok</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/grok.png&quot; alt=&quot;Grok&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 31 Jul 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/grok/</link>
@@ -194,7 +210,7 @@
     
       <item>
         <title>Tsundoku</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/tsundoku.png&quot; alt=&quot;Tsundoku&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Sun, 29 Jul 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/tsundoku/</link>
@@ -205,7 +221,7 @@
     
       <item>
         <title>Hanlon's Razor</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/hanlons-razor.png&quot; alt=&quot;Hanlon's Razor&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Thu, 26 Jul 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/hanlons-razor/</link>
@@ -216,7 +232,7 @@
     
       <item>
         <title>Black Swan Event</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/black-swan-event.png&quot; alt=&quot;Black Swan Event&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Mon, 23 Jul 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/black-swan-event/</link>
@@ -227,7 +243,7 @@
     
       <item>
         <title>Half-life</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/half-life.png&quot; alt=&quot;Half-life&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Mon, 16 Jul 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/half-life/</link>
@@ -238,7 +254,7 @@
     
       <item>
         <title>Simpon's Paradox</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/simpsons-paradox.png&quot; alt=&quot;Simpson's Paradox&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 11 Jul 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/simpsons-paradox/</link>
@@ -249,7 +265,7 @@
     
       <item>
         <title>Reasoning from First Principles</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/reasoning-from-first-princioples.png&quot; alt=&quot;Reasoning from First Principles&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 10 Jul 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/reasoning-from-first-principles/</link>
@@ -260,7 +276,7 @@
     
       <item>
         <title>Overton Window</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/overton-window.png&quot; alt=&quot;Overton Window&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Mon, 09 Jul 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/overton-window/</link>
@@ -271,7 +287,7 @@
     
       <item>
         <title>Butterfly Effect</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/butterfly-effect.png&quot; alt=&quot;Butterfly Effect&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 20 Jun 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/butterfly-effect/</link>
@@ -282,7 +298,7 @@
     
       <item>
         <title>Fermi Problem</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/fermi-problem.png&quot; alt=&quot;Fermi Problem&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 13 Jun 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/fermi-problem/</link>
@@ -293,7 +309,7 @@
     
       <item>
         <title>Dunning Kruger Effect</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/dunning-kruger-effect.png&quot; alt=&quot;Dunning Kruger Effect&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 12 Jun 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/dunning-kruger-effect/</link>
@@ -304,7 +320,7 @@
     
       <item>
         <title>Yak Shaving</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/yak-shaving.png&quot; alt=&quot;Yak Shaving&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Mon, 11 Jun 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/yak-shaving/</link>
@@ -315,7 +331,7 @@
     
       <item>
         <title>Gaslight</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/gaslight&quot; alt=&quot;Gaslight&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Tue, 05 Jun 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/gaslight/</link>
@@ -326,7 +342,7 @@
     
       <item>
         <title>Marshmallow Test</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/marshmallow-test.png&quot; alt=&quot;Marshmallow Test&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Mon, 04 Jun 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/marshmallow-test/</link>
@@ -337,7 +353,7 @@
     
       <item>
         <title>Maslow's Hammer</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/maslows-hammer.png&quot; alt=&quot;Maslow's Hammer&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Sat, 02 Jun 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/maslows-hammer/</link>
@@ -348,7 +364,7 @@
     
       <item>
         <title>Cobra Effect</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/cobra-effect.png&quot; alt=&quot;Cobra Effect&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Fri, 01 Jun 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/cobra-effect/</link>
@@ -359,7 +375,7 @@
     
       <item>
         <title>Kintsugi</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/kintsugi.png&quot; alt=&quot;Kintsugi&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Thu, 31 May 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/kintsugi/</link>
@@ -370,7 +386,7 @@
     
       <item>
         <title>Pareto Principle</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/pareto-principle.png&quot; alt=&quot;Pareto Principle&quot; /&gt;&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 30 May 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/pareto-principle/</link>
@@ -380,8 +396,8 @@
       </item>
     
       <item>
-        <title>Hype Cycle 2</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/hype-cycle.png&quot; alt=&quot;Hype Cycle&quot; /&gt;&lt;/p&gt;
+        <title>Hype Cycle</title>
+        <description>
 </description>
         <pubDate>Tue, 29 May 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/hype-cycle/</link>
