@@ -9,7 +9,6 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@gridsome/source-airtable": "^0.2.0",
-    "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.0",
     "gridsome": "^0.7.17",
     "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
@@ -17,7 +16,7 @@
     "postcss-nested": "^4.2.1",
     "prism-themes": "^1.4.0",
     "sass": "^1.26.9",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^9.0.3",
     "showdown": "^1.9.1",
     "vue-it-bigger": "^0.0.2"
   },
