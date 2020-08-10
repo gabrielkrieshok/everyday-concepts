@@ -1,45 +1,37 @@
 {
   "name": "everyday-concepts",
-  "description": "Jekyll blog for Everyday Concepts project.",
-  "demo": "http://barber.samesies.io",
-  "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "serve": "bundle exec jekyll serve",
-    "build": "bundle exec jekyll build"
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
   },
-  "author": {
-    "name": "Gabriel Krieshok",
-    "email": "gabriel.krieshok@gmail.com",
-    "url": "https://gabrielkrieshok.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/samesies/barber-jekyll.git"
-  },
-  "bugs": "https://github.com/samesies/barber-jekyll/issues",
-  "keywords": [
-    "barber",
-    "jekyll",
-    "blog",
-    "theme"
-  ],
   "dependencies": {
-    "aos": "^2.3.4",
-    "jquery": "^3.5.1",
-    "salvattore": "^1.0.9"
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@gridsome/source-airtable": "^0.2.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.0",
+    "gridsome": "^0.7.17",
+    "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "prism-themes": "^1.4.0",
+    "sass": "^1.26.9",
+    "sass-loader": "^8.0.2",
+    "showdown": "^1.9.1",
+    "vue-it-bigger": "^0.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "babelify": "^10.0.0",
-    "browserify": "^16.5.1",
-    "eslint": "^5.16.0",
-    "s3-website": "^3.3.0",
-    "stylelint": "^13.6.1",
-    "stylelint-config-recommended": "^2.2.0",
-    "stylelint-config-standard": "^18.3.0",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "gridsome-plugin-tailwindcss": "^3.0.1"
   },
-  "license": "MIT"
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "window": true
+    },
+    "globals": {
+      "browser": true,
+      "window": true
+    }
+  }
 }

@@ -1,0 +1,24 @@
+{
+  "menu": [
+    {
+      "name": "Home",
+      "link": "/"
+    },
+    {
+      "name": "Concepts",
+      "link": "/concepts/"
+    },
+    {
+      "name": "Sketches",
+      "link": "/sketches/"
+    },
+    {
+      "name": "Podcast",
+      "link": "/podcast/"
+    },
+    {
+      "name": "About",
+      "link": "/about/"
+    }
+  ]
+}

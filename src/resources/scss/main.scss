@@ -1,0 +1,15 @@
+/*! purgecss start ignore */
+@tailwind base;
+/*! purgecss end ignore */
+
+@import 'base/all';
+
+@tailwind components;
+
+@import 'components/all';
+
+@tailwind utilities;
+
+.handwriting {
+    font-family:Patrick Hand,cursive
+}
