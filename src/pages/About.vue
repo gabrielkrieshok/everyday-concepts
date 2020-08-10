@@ -14,7 +14,7 @@
       <h1 class="page-title">Contact Me</h1>
       <div class="content">
         <p>Get in touch or let me know about new concepts I should sketch!</p>
-        <form class="form" netlify>
+        <form class="form" netlify name="everyday-concepts-form" method="POST" >
           <div class="row required">
             <label for="name">Name</label>
             <input
