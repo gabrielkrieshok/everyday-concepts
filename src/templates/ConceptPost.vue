@@ -1,68 +1,68 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
     <div class="container sm:pxi-0 mx-auto overflow-x-hidden">
-      
-      <div class="lg:mx-48 md:mx-16 sm:mx-8 mx-4">
-      <section class="post-image mx-auto w-full">
+      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8">
+
+<div class="flex flex-wrap -mx-8">
+<div class="my-8 px-8 w-full overflow-hidden xl:w-1/2">
+
+  <section id="metadata" class="mx-auto">
+    <h1 class="text-6xl font-medium leading-none">{{ $page.concept.name}}</h1>
+
+    <div class="font-medium uppercase mb-4">
+      <div class="text-gray-500 font-light text-sm">Category </div>
+      <div class="text-blue-700 tracking-wide">{{ $page.concept.category }}</div>
+    </div>
+
+    <div v-if="$page.concept.aka.length>0" class="text-gray-500 font-light text-sm mt-4">
+      <div class="uppercase">Also Known As...</div>
+      <span
+        v-for="item in $page.concept.aka"
+        :key="item.id"
+        :to="item.path"
+        class="text-xs py-1 mt-1 px-2 mr-1 font-medium text-gray-700 rounded-full border border-gray-700 inline-block align-middle"
+      >{{ item }}</span>
+    </div>
+
+    <div v-if="$page.concept.similar.length>0" class="text-gray-500 font-light text-sm mt-4">
+      <div class="uppercase">Related</div>
+      <span
+        v-for="item in $page.concept.similar"
+        :key="item.id"
+        :to="item.path"
+        class="text-xs py-1 mt-1 px-2 mr-1 font-medium text-gray-700 border border-gray-700 rounded-full inline-block align-middle"
+      >{{ item }}</span>
+    </div>
+        </section>
+</div>
+<div class="my-8 px-8 w-full overflow-hidden xl:w-1/2">
+      <section class="post-image mx-auto">
         <div class="attachments">
           <div v-for="(file) in $page.concept.sketch" :key="file.id" class="attachment--item">
             <g-image :src="file.url"></g-image>
           </div>
         </div>
       </section>
-      </div>
+</div>
+</div>
 
-      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8">
-
-        <section class="post-header container mx-auto px-0 mb-4">
-          <span class="text-blue-500 font-medium uppercase tracking-wide text-sm">
-            {{ $page.concept.category }}
-          </span>
-          <h1 class="text-5xl font-medium leading-none mt-0">{{ $page.concept.name}}</h1>
-        </section>
-
-        <section class="post-author-list mb-4 mx-0">
-          <div class="flex items-center">
-            <div class="pl-0 flex flex-col text-xs leading-none uppercase">
-              <p class="text-gray-700">
-                <time>{{ $page.concept.date }}</time>
-              </p>
-            </div>
+<section>
+          <div class="mb-8">
+            <h1 class="text-4xl font-medium leading-none">Definition</h1>
+            <div class="text-xl text-gray-700 font-serif" v-html="$page.concept.definition"></div>
           </div>
-        </section>
 
-        <section v-if="$page.concept.aka.length>0">
-          <span class="text-gray-700 font-medium leading-none inline-block uppercase align-middle mr-2">AKA </span>
-          <span
-            v-for="item in $page.concept.aka"
-            :key="item.id"
-            :to="item.path"
-            class="text-xs bg-blue-100 py-1 px-4 mr-2 text-gray-700 rounded-full inline-block align-middle"
-          >{{ item }}</span>
-        </section>
-
-          <div class="text-xl py-4 text-gray-700 font-serif" v-html="$page.concept.definition"></div>
-
-        <section v-if="$page.concept.similar.length>0" class="text-right post-tags container mx-auto relative pb-6 border-b">
-          <span class="text-gray-700 font-medium leading-none inline-block uppercase align-middle mr-2">Similar to</span>
-          <span
-            v-for="item in $page.concept.similar"
-            :key="item.id"
-            :to="item.path"
-            class="text-xs bg-transparent py-2 px-4 mr-2 border border-gray-600 text-gray-700 rounded-full"
-          >{{ item }}</span>
-        </section>
+          <div v-if="$page.concept.everydayUse">
+            <h1 class="text-4xl font-medium leading-none">Everyday Use</h1>
+            <div class="text-xl text-gray-700 font-serif" v-html="markdownContent"></div>
+          </div>
+</section>
+            <div class="text-right mx-auto mt-12 relative font-light text-gray-700 uppercase">
+              <time>Updated <span class="ml-1 font-medium">{{ $page.concept.date }}</span></time>
+            </div>
 
       </div>
 
-      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 pb-10">
-
-        <section v-if="$page.concept.everydayUse" class="post-content container mx-auto relative font-serif">
-          <h2 class="text-4xl text-gray-700 font-medium leading-none mt-0">Everyday Use</h2>
-          <div class="post-content-text text-xl" v-html="markdownContent"></div>
-        </section>
-
-      </div>
     </div>
 
   </Layout>
@@ -80,7 +80,7 @@ query($id: ID!) {
     similar
     definition
     everydayUse
-    date (format: "DD MMMM YYYY")
+    date (format: "MMMM DD, YYYY")
     sketch {
       id
       url

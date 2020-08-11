@@ -10,45 +10,11 @@
         <p>Defined, sketched, and produced by me, Gabriel Krieshok.</p>
       </div>
     </section>
-<section id="container-centre" class="column centre flex-1 mt-8">
+
+    <section id="container-centre" class="column centre flex-1 mt-8">
       <h2>Contact Me</h2>
       <div class="content">
         <h3>Get in touch or let me know about new concepts I should sketch!</h3>
-
-<!-- <form
-  name="contact"
-  method="post"
-  v-on:submit.prevent="handleSubmit"
-  action="/success/"
-  data-netlify="true"
-  data-netlify-honeypot="bot-field"
->
-  <input type="hidden" name="form-name" value="contact" />
-  <p hidden>
-    <label>
-      Don’t fill this out: <input name="bot-field" />
-    </label>
-  </p>
-  <div class="sender-info">
-    <div>
-      <label for="name" class="label" >Your name</label>
-      <input type="text" name="name" v-model="formData.name" />
-    </div>
-    <div>
-      <label for="email">Your email</label>
-      <input type="email" name="email" v-model="formData.email" />
-    </div>
-  </div>
-
-  <div class="message-wrapper">
-    <label for="message">Message</label>
-    <textarea name="message" v-model="formData.message"></textarea>
-  </div>
-
-  <button type="submit">Submit form</button>
-</form> -->
-
-
 
         <form
           class="form"
@@ -58,12 +24,13 @@
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-  <input type="hidden" name="form-name" value="contact" />
-  <p hidden>
-    <label>
-      Don’t fill this out: <input name="bot-field" />
-    </label>
-  </p>
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
+
           <div class="row required">
             <label for="name">Name</label>
             <input
@@ -77,6 +44,7 @@
               v-model="formData.name"
             />
           </div>
+
           <div class="row required">
             <label for="email">Email</label>
             <input
@@ -92,10 +60,12 @@
               v-model="formData.email"
             />
           </div>
+
           <div class="row">
             <label for="message">Message</label>
             <textarea class="textarea" id="message" name="message" v-model="formData.message"></textarea>
           </div>
+
           <div class="row">
             <button class="inline-block rounded py-4 px-6 text-white font-bold bg-blue-500 hover:bg-blue-600" type="submit">Send</button>
             <p v-show="submitText" class="text-3xl py-2 text-blue-500 font-bold">Thanks!</p>

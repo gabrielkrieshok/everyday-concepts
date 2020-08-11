@@ -2,13 +2,29 @@
   <Layout>
     <section id="container-centre" class="column centre flex-1">
       <h1 class="page-title">Concepts</h1>
-                  <!-- <label class="inline-flex items-center mt-3">
-                <input type="checkbox" v-model="sketchCheck" class="form-checkbox h-5 w-5 text-gray-600"><span class="ml-2 text-gray-700">Sketch</span>
-            </label> -->
+
+      <div id="options" class="flex justify-center center-items border-b border-gray-200 pb-6 mb-6">
+          <span class="mr-6">Arrange by...</span>
+        <label class="flex text-gray-700 px-6">
+          <input type="radio" value="name" v-model="options" class="form-checkbox h-5 w-5 mt-1 text-gray-600">
+          <span class="mx-2">Name</span>
+        </label>
+        <label class="flex text-gray-700 px-6">
+          <input type="radio" value="category" v-model="options" class="form-checkbox h-5 w-5 mt-1 text-gray-600">
+          <span class="mx-2">Category</span>
+        </label>
+        <label class="flex text-gray-700 px-6">
+          <input type="radio" value="date" v-model="options" class="form-checkbox h-5 w-5 mt-1 text-gray-600">
+          <span class="mx-2">Date Added</span>
+        </label>
+
+      </div>
+
       <div class="px-2">
-        <div class="posts flex flex-wrap -mx-2">
+            <transition-group class="posts flex flex-wrap -mx-2" name="flip-list" tag="div">
+
           <div class="w-full md:w-1/3 mb-8 px-2" v-for="concept in filteredData" :key="concept.node.id">
-            <article class="article-card bg-white overflow-hidden rounded-lg shadow-lg flex-1">
+            <div class="article-card bg-white overflow-hidden rounded-lg shadow-lg flex-1">
               <!-- <g-link class="featured-image-link block relative overflow-hidden" :to="concept.node.simple">
                 <figure>
                   <div v-for="(file) in concept.node.sketch" :key="file.id">
@@ -28,10 +44,11 @@
                 </g-link>
 
                 </div>
-            </article>
+            </div>
           </div>
+            </transition-group>
+
         </div>
-      </div>
     </section>
   </Layout>
 </template>
@@ -40,23 +57,36 @@
 export default {
   data () {
     return {
-      checked: true,
-      akaCheck: false,
-      sketchCheck: false,
-      test: 'ASC'
+      options: 'date'
     }
   },
   computed: {
     filteredData () {
-      return this.$page.concepts.edges.sort((a, b) => {
-        let fa = a.node.simple, fb = b.node.simple
-        if (fa < fb) { return -1 }
-        if (fa > fb) { return 1 }
-        return 0
-      })
+      if (this.options == 'name') {
+        return this.$page.concepts.edges.sort((a, b) => {
+          let fa = a.node.simple, fb = b.node.simple
+          if (fa < fb) { return -1 }
+          if (fa > fb) { return 1 }
+          return 0
+        })
+      } else if (this.options == 'category') {
+        return this.$page.concepts.edges.sort((a, b) => {
+          let fa = a.node.category, fb = b.node.category
+          if (fa < fb) { return -1 }
+          if (fa > fb) { return 1 }
+          return 0
+        })
+      } else {
+          return this.$page.concepts.edges.sort((a, b) => {
+            let fa = a.node.date, fb = b.node.date
+            if (fa < fb) { return 1 }
+            if (fa > fb) { return -1 }
+            return 0
+          })
+      }
     }
   }
-};
+}
 </script>
 
 <page-query>

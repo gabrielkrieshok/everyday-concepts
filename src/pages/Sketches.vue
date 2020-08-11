@@ -27,10 +27,6 @@ export default {
   },
   data () {
     return {
-      checked: true,
-      akaCheck: false,
-      sketchCheck: false,
-      test: 'ASC',
       mediaSketches: [],
       lightBoxComp: ''
     }
@@ -41,9 +37,9 @@ export default {
     })
     for (let i = 0; i < this.$page.concepts.edges.length; i++) {
       this.mediaSketches.push({
-        thumb: this.$page.concepts.edges[i].node.sketch[0].url,
+        thumb: this.$page.concepts.edges[i].node.sketch[0].thumbnails.large.url,
         src: this.$page.concepts.edges[i].node.sketch[0].url,
-        caption: '<a href="' + this.$page.concepts.edges[i].node.simple + '">' + this.$page.concepts.edges[i].node.name + '</a>'
+        caption: '<a href="../' + this.$page.concepts.edges[i].node.simple + '">' + this.$page.concepts.edges[i].node.name + '</a>'
       })
     }
   },
@@ -96,6 +92,11 @@ query Concepts {
           id
           url
           filename
+          thumbnails {
+            large {
+              url
+            }
+          }
         }
       }
     }

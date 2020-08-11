@@ -13,7 +13,7 @@
               <g-link class="featured-image-link block relative overflow-hidden" :to="concept.node.simple">
                 <figure>
                   <div v-for="(file) in concept.node.sketch" :key="file.id">
-                    <g-image :src="file.url" :alt="file.alt" class="block loaded" />
+                    <g-image :src="file.thumbnails.large.url" :alt="file.alt" class="block loaded" />
                   </div>
                 </figure>
               </g-link>
@@ -85,6 +85,11 @@ query Concepts {
           id
           url
           filename
+          thumbnails {
+            large {
+              url
+            }
+          }
         }
       }
     }
