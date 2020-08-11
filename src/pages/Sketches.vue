@@ -2,7 +2,7 @@
   <Layout>
     <section>
 
-      <h1 class="page-title text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl">Sketches</h1>
+      <h1 class="page-title">Sketches</h1>
 
         <div class="flex content-center flex-wrap" style="width:100%;">
 
@@ -40,7 +40,6 @@ export default {
       this.lightBoxComp = 'LightBox'
     })
     for (let i = 0; i < this.$page.concepts.edges.length; i++) {
-      console.log(this.$page.concepts.edges[i].node.simple)
       this.mediaSketches.push({
         thumb: this.$page.concepts.edges[i].node.sketch[0].url,
         src: this.$page.concepts.edges[i].node.sketch[0].url,

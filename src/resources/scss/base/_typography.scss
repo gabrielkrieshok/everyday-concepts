@@ -1,23 +1,41 @@
 h1, h2, h3, h4, h5, h6 {
-    @apply font-bold leading-tight mt-0 mb-6 text-purple-900 handwriting;
+    @apply font-bold leading-tight mt-0 mb-6 text-gray-900;
 }
 
-.page-title {
-	@apply text-5xl;
+h1 {
+	@apply handwriting
 }
+
+h2 {
+	@apply text-2xl
+}
+
+h3 {
+	@apply border-b border-gray-200 text-2xl pb-6 mb-6 font-light leading-snug text-gray-600;
+}
+
+
+.page-title {
+	@apply text-5xl text-center mb-6;
+
+	@screen lg {
+		@apply mb-12;
+	}
+}
+
 
 
 .content {
 
 	p {
-		@apply mb-8;
+		@apply mb-4 font-body;
 
-		&:first-child {
-			@apply border-b border-gray-200 text-2xl pb-10 mb-10 font-light leading-snug text-gray-600;
+		// &:first-child {
+		// 	@apply border-b border-gray-200 text-2xl pb-10 mb-10 font-light leading-snug text-gray-600;
 
-			@screen md {
-                @apply text-3xl;
-            }
-		}
+		// 	@screen md {
+        //         @apply text-3xl;
+        //     }
+		// }
     }
 }
