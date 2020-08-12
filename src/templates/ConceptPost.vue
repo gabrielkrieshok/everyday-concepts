@@ -11,7 +11,7 @@
 
     <div class="font-medium uppercase mb-4">
       <div class="text-gray-500 font-light text-sm">Category </div>
-      <div class="text-blue-700 tracking-wide">{{ $page.concept.category }}</div>
+      <div class="text-blue-500 tracking-wide">{{ $page.concept.category }}</div>
     </div>
 
     <div v-if="$page.concept.aka.length>0" class="text-gray-500 font-light text-sm mt-4">
@@ -37,11 +37,7 @@
 </div>
 <div class="my-8 px-8 w-full overflow-hidden xl:w-1/2">
       <section class="post-image mx-auto">
-        <div class="attachments">
-          <div v-for="(file) in $page.concept.sketch" :key="file.id" class="attachment--item">
-            <g-image :src="file.url"></g-image>
-          </div>
-        </div>
+            <g-image :src="$page.concept.sketch[0].thumbnails.large.url" @click="openGallery(0)"></g-image>
       </section>
 </div>
 </div>
@@ -65,8 +61,74 @@
 
     </div>
 
+      <component :is="lightBoxComp"
+      :media="sketchInfo"
+      ref="lightbox"
+      :show-caption="false"
+      :show-light-box="false"
+      :showThumbs="false"
+      :disableScroll="true"
+      :nThumbs=1
+      >
+      </component>
+
   </Layout>
 </template>
+
+<script>
+import showdown from 'showdown';
+const markdownConverter = new showdown.Converter();
+
+export default {
+  components: {
+    LightBox: () => import('vue-it-bigger')
+  },
+  data() {
+    return {
+      markdownContent: '',
+      sketchInfo: [
+        {
+          thumb: '',
+          src: '',
+        }
+      ],
+      lightBoxComp: ''
+    }
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+      this.lightBoxComp = 'LightBox'
+    })
+  },
+  methods: {
+    openGallery() {
+      this.$refs.lightbox.showImage(0)
+      this.sketchInfo = [{
+        thumb: this.$page.concept.sketch[0].thumbnails.large.url,
+        src: this.$page.concept.sketch[0].url
+      },
+    ]}
+  },
+  created() {
+      this.markdownContent = markdownConverter.makeHtml(this.$page.concept.everydayUse)
+  } 
+}
+</script>
+
+<style>
+.vib-container .vib-thumbnail, .vib-container .vib-thumbnail-active {
+  height: 75px !important;
+  width: 100px;
+  background-position: 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+.vib-content img.vib-image {
+    max-height: 70vh
+}
+</style>
 
 <page-query>
 query($id: ID!) {
@@ -80,34 +142,17 @@ query($id: ID!) {
     similar
     definition
     everydayUse
-    date (format: "MMMM DD, YYYY")
+    date (format: "MMMM D, YYYY")
     sketch {
       id
       url
       filename
+          thumbnails {
+            large {
+              url
+            }
+          }
+        }
+      }
     }
-  }
-}
 </page-query>
-
-<script>
-import showdown from 'showdown';
-const markdownConverter = new showdown.Converter();
-
-export default {
-  data() {
-    return {
-      markdownContent: ''
-    }
-  },
-  created() {
-      this.markdownContent = markdownConverter.makeHtml(this.$page.concept.everydayUse)
-  },
-  metaInfo() {
-    return {
-      title: this.$page.concept.name
-    };
-  }
-  
-};
-</script>

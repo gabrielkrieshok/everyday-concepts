@@ -2,7 +2,7 @@
   <div>
     <nav
       id="mobile-nav"
-      class="mobile-nav fixed left-0 top-0 h-screen w-full overflow-y-auto pt-12 bg-purple-900 z-50 md:hidden"
+      class="mobile-nav fixed left-0 top-0 h-screen w-full overflow-y-auto pt-12 bg-blue-500 z-50 md:hidden"
       :class="toggleNav ? 'menu-visible': ''"
     >
       <ul>
@@ -13,9 +13,9 @@
         >
           <g-link
             :to="element.link"
-            class="link block py-2 px-5 text-white text-3xl hover:text-blue-500"
+            class="link block py-2 px-5 text-white text-3xl hover:text-blue-800"
             active-class="is-active-link"
-            exact-active-class="active text-blue-500"
+            exact-active-class="active text-blue-300"
           >{{ element.name }}</g-link>
         </li>
       </ul>
@@ -23,7 +23,7 @@
 
     <button
       id="mobile-nav-toggle"
-      class="mobile-nav-toggle block fixed h-16 w-full bottom-0 flex items-center justify-center font-bold border-none bg-purple-900 text-white z-50 focus:outline-none md:hidden"
+      class="mobile-nav-toggle block fixed h-16 w-full bottom-0 flex items-center justify-center font-bold border-none bg-blue-500 text-white z-50 focus:outline-none md:hidden"
       :class="toggleNav ? 'menu-toggle-active': ''"
       aria-expanded="false"
       aria-controls="mobile-nav"

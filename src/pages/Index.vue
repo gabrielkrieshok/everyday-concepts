@@ -12,42 +12,16 @@
             <article class="article-card bg-white overflow-hidden rounded-lg shadow-lg flex-1">
               <g-link class="featured-image-link block relative overflow-hidden" :to="concept.node.simple">
                 <figure>
-                  <div v-for="(file) in concept.node.sketch" :key="file.id">
-                    <g-image :src="file.thumbnails.large.url" :alt="file.alt" class="block loaded" />
-                  </div>
+                    <g-image :src="concept.node.sketch[0].thumbnails.large.url" :alt="concept.node.sketch[0].alt" class="block loaded" />
                 </figure>
               </g-link>
-              
-              <div class="p-4">
-
-                <span class="text-blue-500 font-medium uppercase tracking-wide text-xs">
-                  {{ concept.node.category }}
-                </span>
-              
-              <g-link :to="concept.node.simple">
-                <h2 class="text-2xl block text-purple-900 hover:text-blue-500 mb-0">{{ concept.node.name }}</h2>
-
-                <section v-if="concept.node.aka.length>0" class="mt-2">
-                  <span class="text-sm text-gray-700 font-light leading-none inline-block uppercase align-middle mr-2">AKA </span>
-                  <span
-                    v-for="item in concept.node.aka"
-                    :key="item.id"
-                    :to="item.path"
-                    class="text-xs bg-blue-100 py-1 px-4 mr-2 text-gray-700 rounded-full inline-block align-middle"
-                  >
-                    {{ item }}
-                  </span>
-                </section>
-              </g-link>
-
-              </div>
                 
             </article>
             
           </div>
         </div>
         
-        <p class="text-center text-xl">Explore all of the <a href="/concepts/">concepts</a> and <a href="/sketches/">sketches</a>.</p>
+        <p class="text-center text-xl">Explore all of the <a href="/concepts">concepts</a> or just the <a href="/gallery">gallery of sketches</a>.</p>
 
       </div>
     </section>

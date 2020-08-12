@@ -1,11 +1,11 @@
 <template>
   <header
     id="header"
-    class="header bg-blue-900 flex flex-col md:flex-row md:justify-between items-center p-4 md:p-6"
+    class="header bg-blue-500 flex flex-col md:flex-row md:justify-between items-center p-4 md:p-6"
     role="banner"
   >
     <g-link
-      class="company-logo-link block text-white font-bold text-2xl md:text-3xl hover:text-blue-500 handwriting"
+      class="company-logo-link block text-white font-bold text-2xl md:text-3xl hover:text-blue-800 handwriting"
       to="/"
       aria-label="Back to home"
     >Everyday Concepts</g-link>
@@ -19,9 +19,9 @@
         >
           <g-link
             :to="element.link"
-            class="link font-bold text-white hover:text-blue-500"
+            class="link font-bold text-white hover:text-blue-800"
             active-class="is-active-link"
-            exact-active-class="active text-blue-500"
+            exact-active-class="active text-blue-300"
           >{{ element.name }}</g-link>
         </li>
       </ul>

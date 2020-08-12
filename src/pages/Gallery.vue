@@ -2,7 +2,7 @@
   <Layout>
     <section>
 
-      <h1 class="page-title">Sketches</h1>
+      <h1 class="page-title">Gallery</h1>
 
         <div class="flex content-center flex-wrap" style="width:100%;">
 
