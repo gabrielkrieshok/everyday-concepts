@@ -6,6 +6,12 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-140956931-1'
+      }
+    },
+    {
       use: "@gridsome/source-airtable",
       options: {
         // Add these to a .env file

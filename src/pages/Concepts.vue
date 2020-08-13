@@ -3,7 +3,7 @@
     <section id="container-centre" class="column centre flex-1">
       <h1 class="page-title">Concepts</h1>
 
-      <div id="options" class="flex flex-wrap flex-col justify-center center-items border-b border-gray-200 pb-6 mb-6 w-full md:flex-row mx-12">
+      <div id="options" class="flex flex-wrap flex-col justify-center center-items border-b border-gray-200 pb-6 mb-6 md:flex-row mx-12">
           <span class="mr-6">Arrange by...</span>
         <label class="text-gray-700 px-6">
           <input type="radio" value="name" v-model="options" class="form-checkbox h-5 w-5 mt-1 text-gray-600">
@@ -26,24 +26,20 @@
           <div class="transform w-full md:w-1/4 mb-8 px-2 hover:-translate-y-1 hover:scale-104 transition ease-in-out duration-300" v-for="concept in filteredData" :key="concept.node.id">
             <div class="rounded-lg shadow-lg flex-1">
               <g-link class="featured-image-link block relative overflow-hidden" :to="concept.node.simple">
-                <figure>
-                  <div v-for="(file) in concept.node.sketch" :key="file.id">
-                    <g-image :src="file.url" :alt="file.alt" class="block loaded" />
-                </div>
-                </figure>
-              </g-link>
               <div class="p-8">
                 <span class="text-blue-500 font-medium uppercase tracking-wide text-xs">
                   {{ concept.node.category }}
                 </span>
-                <g-link :to="concept.node.simple">
-                  <h2 class="text-2xl block text-blue-500 hover:text-blue-500 mb-0">{{ concept.node.name }}</h2>
+                  <h2 class="text-2xl block text-purple-900 hover:text-blue-500 mb-0">{{ concept.node.name }}</h2>
                   <p class="block font-medium text-xs py-4 text-gray-700" v-html="concept.node.definition"></p>
                   <div class="text-right font-light text-sm text-gray-600">
+                                      <g-image :src="concept.node.sketch[0].thumbnails.large.url" :alt="concept.node.sketch[0].id" />
+
                   </div>
+                </div>
+
                 </g-link>
 
-                </div>
             </div>
           </div>
             </transition-group>
@@ -108,6 +104,11 @@ query Concepts {
           id
           url
           filename
+          thumbnails {
+            large {
+              url
+            }
+          }
         }
       }
     }
