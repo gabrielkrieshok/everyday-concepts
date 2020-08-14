@@ -86,14 +86,19 @@ export default {
         title: this.$page.concept.name,
         meta: [
           {
+            key: 'og:image',
+            name: 'og:image',
+            content: this.$page.concept.sketch[0].thumbnails.large.url
+          },
+          {
             key: 'og:description',
             name: 'og:description',
-            content: 'Everyday Concepts — Exploring the concepts, ideas, and mental models that construct our lives.\n\n' + this.$page.concept.name + ': ' + this.$page.concept.definition,
+            content: this.$page.concept.name + ' — ' + this.$page.concept.definition
           },
           {
             key: 'twitter:description',
             name: 'twitter:description',
-            content: 'Everyday Concepts — Exploring the concepts, ideas, and mental models that construct our lives.\n\n' + this.$page.concept.name + ': ' + this.$page.concept.definition,
+            content: this.$page.concept.name + ' — ' + this.$page.concept.definition
           },
         ],
       }
