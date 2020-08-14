@@ -5,7 +5,7 @@
       <div class="my-8 px-8 w-full overflow-hidden xl:w-1/2">
 
   <section id="metadata" class="mx-auto">
-    <h1 class="text-6xl font-medium leading-none">{{ $page.concept.name}}</h1>
+    <h1 class="handwriting text-6xl font-medium leading-none">{{ $page.concept.name}}</h1>
 
     <div class="font-medium uppercase mb-4">
       <div class="text-gray-500 font-light text-sm">Category </div>
@@ -43,17 +43,17 @@
 <section>
           <div class="mb-8">
             <h1 class="text-4xl font-medium leading-none">Definition</h1>
-            <div class="text-xl text-gray-700 font-serif" v-html="$page.concept.definition"></div>
+            <div class="text-xl text-gray-700 font-serif" v-html="markdownDefinition"></div>
           </div>
 
           <div v-if="$page.concept.origin" class="mb-8">
             <h1 class="text-4xl font-medium leading-none">Origin</h1>
-            <div class="text-xl text-gray-700 font-serif" v-html="$page.concept.origin"></div>
+            <div class="text-xl text-gray-700 font-serif" v-html="markdownOrigin"></div>
           </div>
 
           <div v-if="$page.concept.everydayUse" class="mb-8">
             <h1 class="text-4xl font-medium leading-none">Everyday Use</h1>
-            <div class="text-xl text-gray-700 font-serif" v-html="markdownContent"></div>
+            <div class="text-xl text-gray-700 font-serif" v-html="markdownEverydayUse"></div>
           </div>
 </section>
             <div class="text-right mx-auto mt-12 text-sm font-light text-gray-500 uppercase">
@@ -103,7 +103,9 @@ export default {
   },
   data() {
     return {
-      markdownContent: '',
+      markdownDefinition: '',
+      markdownOrigin: '',
+      markdownEverydayUse: '',
       sketchInfo: [
         {
           thumb: '',
@@ -128,7 +130,10 @@ export default {
     ]}
   },
   created() {
-      this.markdownContent = markdownConverter.makeHtml(this.$page.concept.everydayUse)
+      this.markdownDefinition = markdownConverter.makeHtml(this.$page.concept.definition)
+      this.markdownOrigin = markdownConverter.makeHtml(this.$page.concept.origin)
+      this.markdownEverydayUse = markdownConverter.makeHtml(this.$page.concept.everydayUse)
+
   } 
 }
 </script>

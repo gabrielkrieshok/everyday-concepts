@@ -30,7 +30,7 @@
                 <span class="text-blue-500 font-medium uppercase tracking-wide text-xs">
                   {{ concept.node.category }}
                 </span>
-                  <h2 class="text-2xl block text-purple-900 hover:text-blue-500 mb-0">{{ concept.node.name }}</h2>
+                  <h2 class="handwriting text-2xl block text-purple-900 hover:text-blue-500 mb-0">{{ concept.node.name }}</h2>
                   <p class="block font-medium text-xs py-4 text-gray-700" v-html="concept.node.definition"></p>
                 <g-image :src="concept.node.sketch[0].thumbnails.large.url" :alt="concept.node.name" />
                 </div>
