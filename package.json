@@ -19,6 +19,8 @@
     "sass": "^1.26.9",
     "sass-loader": "^9.0.3",
     "showdown": "^1.9.1",
+    "typeface-open-sans": "^0.0.75",
+    "typeface-patrick-hand": "^0.0.72",
     "vue-it-bigger": "^0.0.2"
   },
   "devDependencies": {

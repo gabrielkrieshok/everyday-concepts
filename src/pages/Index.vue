@@ -12,7 +12,7 @@
             <article class="article-card bg-white overflow-hidden rounded-lg shadow-lg flex-1">
               <g-link class="featured-image-link block relative overflow-hidden" :to="concept.node.simple">
                 <figure>
-                    <g-image :src="concept.node.sketch[0].thumbnails.large.url" :alt="concept.node.sketch[0].alt" class="block loaded" />
+                    <g-image :src="concept.node.sketch[0].thumbnails.large.url" :alt="concept.node.name" class="block loaded" />
                 </figure>
               </g-link>
                 

@@ -32,10 +32,7 @@
                 </span>
                   <h2 class="text-2xl block text-purple-900 hover:text-blue-500 mb-0">{{ concept.node.name }}</h2>
                   <p class="block font-medium text-xs py-4 text-gray-700" v-html="concept.node.definition"></p>
-                  <div class="text-right font-light text-sm text-gray-600">
-                                      <g-image :src="concept.node.sketch[0].thumbnails.large.url" :alt="concept.node.sketch[0].id" />
-
-                  </div>
+                <g-image :src="concept.node.sketch[0].thumbnails.large.url" :alt="concept.node.name" />
                 </div>
 
                 </g-link>

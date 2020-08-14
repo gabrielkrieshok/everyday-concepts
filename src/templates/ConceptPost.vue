@@ -1,10 +1,8 @@
 <template>
-  <Layout :hideHeader="true" :disableScroll="true">
-    <div class="container sm:pxi-0 mx-auto overflow-x-hidden">
+  <Layout>
       <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8">
-
-<div class="flex flex-wrap -mx-8">
-<div class="my-8 px-8 w-full overflow-hidden xl:w-1/2">
+      <div class="flex flex-wrap -mx-8">
+      <div class="my-8 px-8 w-full overflow-hidden xl:w-1/2">
 
   <section id="metadata" class="mx-auto">
     <h1 class="text-6xl font-medium leading-none">{{ $page.concept.name}}</h1>
@@ -37,7 +35,7 @@
 </div>
 <div class="my-8 px-8 w-full overflow-hidden xl:w-1/2">
       <section class="post-image mx-auto">
-            <g-image :src="$page.concept.sketch[0].thumbnails.large.url" @click="openGallery(0)"></g-image>
+            <g-image :src="$page.concept.sketch[0].thumbnails.large.url" @click="openGallery(0)" :alt="$page.concept.name"></g-image>
       </section>
 </div>
 </div>
@@ -48,18 +46,21 @@
             <div class="text-xl text-gray-700 font-serif" v-html="$page.concept.definition"></div>
           </div>
 
-          <div v-if="$page.concept.everydayUse">
+          <div v-if="$page.concept.origin" class="mb-8">
+            <h1 class="text-4xl font-medium leading-none">Origin</h1>
+            <div class="text-xl text-gray-700 font-serif" v-html="$page.concept.origin"></div>
+          </div>
+
+          <div v-if="$page.concept.everydayUse" class="mb-8">
             <h1 class="text-4xl font-medium leading-none">Everyday Use</h1>
             <div class="text-xl text-gray-700 font-serif" v-html="markdownContent"></div>
           </div>
 </section>
-            <div class="text-right mx-auto mt-12 relative font-light text-gray-700 uppercase">
-              <time>Updated <span class="ml-1 font-medium">{{ $page.concept.date }}</span></time>
+            <div class="text-right mx-auto mt-12 text-sm font-light text-gray-500 uppercase">
+              <time>Updated <span class="ml-1 font-medium text-base">{{ $page.concept.date }}</span></time>
             </div>
 
       </div>
-
-    </div>
 
       <component :is="lightBoxComp"
       :media="sketchInfo"
@@ -80,6 +81,23 @@ import showdown from 'showdown';
 const markdownConverter = new showdown.Converter();
 
 export default {
+  metaInfo() {
+      return {
+        title: this.$page.concept.name,
+        meta: [
+          {
+            key: 'og:description',
+            name: 'og:description',
+            content: 'Everyday Concepts — Exploring the concepts, ideas, and mental models that construct our lives.\n\n' + this.$page.concept.name + ': ' + this.$page.concept.definition,
+          },
+          {
+            key: 'twitter:description',
+            name: 'twitter:description',
+            content: 'Everyday Concepts — Exploring the concepts, ideas, and mental models that construct our lives.\n\n' + this.$page.concept.name + ': ' + this.$page.concept.definition,
+          },
+        ],
+      }
+    },
   components: {
     LightBox: () => import('vue-it-bigger')
   },
@@ -139,6 +157,7 @@ query($id: ID!) {
     priority
     category
     aka
+    origin
     similar
     definition
     everydayUse
