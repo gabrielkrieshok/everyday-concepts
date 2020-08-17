@@ -111,7 +111,7 @@ export default {
       markdownDefinition: '',
       markdownOrigin: '',
       markdownEverydayUse: '',
-      sketchInfo: [
+        sketchInfo: [
         {
           thumb: '',
           src: '',
@@ -137,8 +137,7 @@ export default {
   created() {
       this.markdownDefinition = markdownConverter.makeHtml(this.$page.concept.definition)
       this.markdownOrigin = markdownConverter.makeHtml(this.$page.concept.origin)
-      this.markdownEverydayUse = markdownConverter.makeHtml(this.$page.concept.everydayUse)
-
+      this.markdownEverydayUse = markdownConverter.makeHtml(this.$page.concept.everydayUse).replace("\n","<p>")
   } 
 }
 </script>

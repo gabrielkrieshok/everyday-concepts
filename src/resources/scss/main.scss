@@ -17,3 +17,7 @@
 .flip-list-move {
     transition: transform .5s;
   }
+
+p {
+    @apply pb-4
+}
