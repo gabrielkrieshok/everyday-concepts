@@ -20,11 +20,11 @@ export default function (Vue, { router, head, isClient }) {
   // Add attributes to BODY tag
   head.bodyAttrs = { class: 'text-blue-900 leading-normal text-lg' }
 
-  // // Import Google Fonts
-  // head.link.push({
-  //   rel: 'stylesheet',
-  //   href: 'https://fonts.googleapis.com/css?family=Open+Sans|Patrick+Hand&display=swap'
-  // })
+  // Import Google Fonts
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Open+Sans|Patrick+Hand&display=swap'
+  })
 
   head.meta.push({
     key: 'og:title',
