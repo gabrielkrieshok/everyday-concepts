@@ -54,7 +54,7 @@ query Concepts {
         similar
         definition
         everydayUse
-        date
+        datePublished
         sketch {
           id
           url

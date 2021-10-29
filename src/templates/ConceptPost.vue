@@ -170,7 +170,7 @@ query($id: ID!) {
     similar
     definition
     everydayUse
-    date (format: "MMMM D, YYYY")
+    datePublished (format: "MMMM D, YYYY")
     sketch {
       id
       url
