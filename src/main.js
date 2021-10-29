@@ -1,13 +1,18 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
+require('@fontsource/open-sans')
+
+// See main.scss for loading of patrick-hand font, located as static font asset.
+// require('@fontsource/patrick-hand')
+
 import DefaultLayout from '~/layouts/Default.vue'
 
 import('vue-it-bigger/dist/vue-it-bigger.min.css') // when using webpack
 
 import '~/resources/scss/main.scss'
-require('typeface-open-sans')
-require('typeface-patrick-hand')
+
+
 
 export default function (Vue, { router, head, isClient }) {
 
@@ -19,12 +24,6 @@ export default function (Vue, { router, head, isClient }) {
 
   // Add attributes to BODY tag
   head.bodyAttrs = { class: 'text-blue-900 leading-normal text-lg' }
-
-  // Import Google Fonts
-  head.link.push({
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Open+Sans|Patrick+Hand&display=swap'
-  })
 
   head.meta.push({
     key: 'og:title',

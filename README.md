@@ -3,7 +3,7 @@
 Built using the wonderful [Gridsome](https://gridsome.org/), [Airtable](https://airtable.com/) and [TailwindCSS](https://tailwindcss.com/).
 
 ```bash
-yarn global add @gridsome/cli
+yarn add @gridsome/cli
 gridsome develop
 gridsome build
 ```

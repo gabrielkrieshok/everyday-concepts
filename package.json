@@ -7,6 +7,8 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@fontsource/open-sans": "^4.5.1",
+    "@fontsource/patrick-hand": "^4.5.0",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@gridsome/plugin-google-analytics": "^0.1.1",
     "@gridsome/source-airtable": "^0.2.0",
@@ -20,8 +22,6 @@
     "sass": "^1.26.9",
     "sass-loader": "^9.0.3",
     "showdown": "^1.9.1",
-    "typeface-open-sans": "^0.0.75",
-    "typeface-patrick-hand": "^0.0.72",
     "vue-it-bigger": "^0.0.2"
   },
   "devDependencies": {

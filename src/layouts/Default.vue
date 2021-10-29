@@ -20,7 +20,10 @@
     </ClientOnly>
     
   </div>
+
 </template>
+
+
 
 <script>
 import HeaderPartial from '~/layouts/partials/Header.vue'

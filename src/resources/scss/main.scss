@@ -10,8 +10,16 @@
 
 @tailwind utilities;
 
+// Load Patrick Hand manually here without fontsource as to ensure no Flash of Unstyled Text
+@font-face {
+    font-family: "Patrick Hand";
+    font-style: normal;
+    font-display: block;
+    src: local("Patrick Hand"), url("/assets/fonts/patrick-hand-latin-400-normal.woff2") format("woff2");
+  }
+
 .handwriting {
-    font-family:Patrick Hand,cursive
+    font-family:"Patrick Hand";
 }
 
 .flip-list-move {
