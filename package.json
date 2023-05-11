@@ -1,40 +1,45 @@
 {
   "name": "everyday-concepts",
-  "private": true,
+  "version": "2.0.0",
+  "description": "A re-write of Everyday Concepts using 11ty.",
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "start": "npm run serve",
+    "watch": "concurrently -c auto npm:css:watch npm:11ty:watch",
+    "serve": "concurrently -c auto npm:css:watch npm:11ty:serve",
+    "build": "npm run css:build && npm run 11ty:build",
+    "debug": "cross-env DEBUG=Eleventy* npm run build",
+    "11ty:watch": "cross-env NODE_ENV=development eleventy --watch --incremental",
+    "11ty:serve": "cross-env NODE_ENV=development eleventy --serve --incremental",
+    "11ty:build": "cross-env NODE_ENV=production eleventy",
+    "css:watch": "tailwindcss -i src/assets/css/main.css -o dist/assets/css/main.css -w",
+    "css:build": "tailwindcss -i src/assets/css/main.css -o dist/assets/css/main.css -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielkrieshok/everydayconcepts.git"
+  },
+  "author": "Gabriel Krieshok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielkrieshok/everydayconcepts/issues"
+  },
+  "homepage": "https://github.com/gabrielkrieshok/everydayconcepts#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.7",
+    "html-minifier": "^4.0.0",
+    "tailwindcss": "^3.2.4",
+    "terser": "^5.16.1"
   },
   "dependencies": {
-    "@fontsource/open-sans": "^4.5.1",
-    "@fontsource/patrick-hand": "^4.5.0",
-    "@fullhuman/postcss-purgecss": "^2.3.0",
-    "@gridsome/plugin-google-analytics": "^0.1.1",
-    "@gridsome/source-airtable": "^0.2.0",
-    "@gridsome/transformer-remark": "^0.6.0",
-    "gridsome": "^0.7.17",
-    "gridsome-plugin-feed": "^1.0.2",
-    "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.2.1",
-    "prism-themes": "^1.4.0",
-    "sass": "^1.26.9",
-    "sass-loader": "^9.0.3",
-    "showdown": "^1.9.1",
-    "vue-it-bigger": "^0.0.2"
-  },
-  "devDependencies": {
-    "gridsome-plugin-tailwindcss": "^3.0.1"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "window": true
-    },
-    "globals": {
-      "browser": true,
-      "window": true
-    }
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@11ty/eleventy-img": "^3.1.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "airtable": "^0.11.6",
+    "dotenv": "^16.0.3",
+    "markdown-it": "^13.0.1"
   }
 }

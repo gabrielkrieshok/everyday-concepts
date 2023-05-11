@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<article class="max-w-5xl mx-auto">
+    <header class="mb-14">
+        <h1 class="text-3xl text-center font-bold leading-normal text-slate-900 mt-0 mb-3">{{ paged.Name }}</h1>
+        {# <div class="text-center">Published on {{ paged["Published Date"] | readableDate }}</div> #}
+        {# {% if tags %}
+        <div class="mt-3 text-center">
+            {% for tag in tags %}
+            <a href="{{ '/tags/' | url }}{{ tag }}" class="inline-block bg-slate-200 rounded-full px-3 py-1 text-sm font-medium text-slate-700 m-0.5">#{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %} #}
+        <div class="w-full max-w-2xl mx-auto">
+            {% image paged.Sketch[0].url, paged.Name, "(min-width: 30em) 50vw, 100vw" %}
+        </div>
+    </header>
+        <div id="content" class="prose text-slate-800 max-w-none">
+        <h2 class="mb-0">Definition</h2>
+        {{ paged.Definition | safe }}
+        <h2 class="mt-6 mb-0">Origin</h2>
+        {{ paged.Origin | renderUsingMarkdown | safe }}
+        {# {{ paged.Origin.rawMarkdown | renderUsingMarkdown }} #}
+        <section id="metadata" class="mt-6 mb-0">
+            <div class="font-medium uppercase mb-4">
+            <div class="text-gray-500 font-light text-sm">Category </div>
+            <div class="text-blue-500 tracking-wide py-1 mt-1 px-2 mr-1 font-medium rounded-full border border-gray-700 inline-block align-middle">{{ paged.Category }}</div>
+
+            <div class="text-gray-500 font-light text-sm mt-4">
+                {% if paged.AKA.length %}
+                <div class="uppercase">Also Known As...</div>
+                {% for item in paged.AKA %}
+                    <span class="text-xs py-1 mt-1 px-2 mr-1 font-medium text-gray-700 rounded-full border border-gray-700 inline-block align-middle">
+                    {{ item }}</span>
+                {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="text-gray-500 font-light text-sm mt-4">
+                {% if paged.Similar.length %}
+            <div class="uppercase">Similar</div>
+                {% for item in paged.Similar %}
+                    <span class="text-xs py-1 mt-1 px-2 mr-1 font-medium text-gray-700 border border-gray-700 rounded-full inline-block align-middle">
+                    {{ item }}</span>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </section>
+    </div>
+
+</article>

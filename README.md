@@ -1,14 +1,27 @@
-# Everyday Concepts Site
+# Everyday Concepts
 
-Built using the wonderful [Gridsome](https://gridsome.org/), [Airtable](https://airtable.com/) and [TailwindCSS](https://tailwindcss.com/).
+A re-write of Everyday Concepts with 11ty, using Tailwind CSS and credit to [vktrwlt](https://github.com/vktrwlt/pugsum)'s blog.
+
+## Use
+
+### Use in development'
 
 ```bash
-yarn add @gridsome/cli
-gridsome develop
-gridsome build
+npm start
 ```
 
-## Credits
+### Build for production
 
-* Heavily inspired from the [Starter Gridsome](https://gridsome.org/starters/gridsome-skeleventy-starter/) site by [Joseph Dyer](https://github.com/josephdyer).
-* AirTable configuration adapted from the [Airtable Events Starter](https://gridsome.org/starters/airtable-events-starter/).
+```bash
+npm run build
+```
+
+### For debugging purposes
+
+```bash
+npm run debug
+```
+
+## Configuration
+
+To change the title, description, author data, menu/nav item, etc, go to `src/_data/`.
