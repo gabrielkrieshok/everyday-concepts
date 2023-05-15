@@ -17,12 +17,7 @@ layout: default
             {% image paged.Sketch[0].url, paged.Name, "(min-width: 30em) 50vw, 100vw" %}
         </div>
     </header>
-        <div id="content" class="prose text-slate-800 max-w-none">
-        <h2 class="mb-0">Definition</h2>
-        {{ paged.Definition | safe }}
-        <h2 class="mt-6 mb-0">Origin</h2>
-        {{ paged.Origin | renderUsingMarkdown | safe }}
-        {# {{ paged.Origin.rawMarkdown | renderUsingMarkdown }} #}
+
         <section id="metadata" class="mt-6 mb-0">
             <div class="font-medium uppercase mb-4">
             <div class="text-gray-500 font-light text-sm">Category </div>
@@ -48,6 +43,14 @@ layout: default
                 {% endif %}
             </div>
         </section>
+
+    <div id="content" class="prose text-slate-800 max-w-none">
+        <h2 class="mb-0">Definition</h2>
+        {{ paged.Definition | safe }}
+        <h2 class="mt-6 mb-0">Origin</h2>
+        {{ paged.Origin | renderUsingMarkdown | safe }}
+        <h2 class="mb-0">Everyday Use</h2>
+        {{ paged["Everyday Use"] | safe }}
     </div>
 
 </article>
